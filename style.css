@@ -1,0 +1,225 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        letter-spacing: 0.1rem;
+    }
+    
+    #navbar {
+        height: 8vh;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1.5px solid white;
+        position: fixed;
+        top: 0px;
+        z-index: 2;
+    }
+    
+    div a {
+        text-decoration: none;
+    }
+    
+    div li {
+        list-style: none;
+    }
+    
+    #navbar a:hover {
+        border: 1px solid rgb(255, 208, 0);
+        cursor: pointer;
+    }
+    
+    .div1 {
+        height: 20vh;
+        width: 50vw;
+        margin-top: 16vh;
+        margin-left: 10vh;
+        letter-spacing: 0.1rem;
+        position: relative;
+        top: 4vh;
+        word-break: keep-all;
+    }
+    
+    #skill {
+        text-align: center;
+        text-decoration: rgb(179, 255, 0) underline;
+        letter-spacing: 0.1rem;
+    }
+    
+    .container {
+        margin: 8vh;
+        margin-bottom: 20vh;
+        height: 30vh;
+        width: 90vw;
+    }
+    
+    .container1 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        margin-top: 2vh;
+    }
+    
+    .container2 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        margin-top: 2vh;
+    }
+    
+    .container3 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        margin-top: 2vh;
+    }
+    
+    .div {
+        background-color: rgba(184, 180, 180, 0.199);
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+        height: 70px;
+        width: 200px;
+        flex-shrink: 1;
+    }
+    
+    #name {
+        color: rgb(201, 15, 15);
+    }
+    
+    #greet {
+        color: rgb(167, 185, 4);
+    }
+    
+    span {
+        color: rgba(87, 129, 10, 0.979);
+    }
+    
+    .div2 {
+        height: 3vh;
+        width: 15vw;
+        margin-top: 3vh;
+        margin-left: 1vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .img {
+        height: 27vh;
+        width: 26vh;
+        position: relative;
+        left: 65vw;
+        bottom: 17vh;
+        background-image: url(img.png.jpg);
+        background-size: cover;
+        border-radius: 50%;
+    }
+    
+    .img:hover {
+        outline-style: solid;
+        outline-color: rgb(12, 71, 150);
+        outline-width: 0.5vh;
+        outline-offset: 0vh;
+    }
+    
+    .div8 {
+        height: 40vh;
+        width: 100%;
+        position: sticky;
+        bottom: 0vh;
+        display: flex;
+        border-top: 1px solid white;
+    }
+    
+    .div9 {
+        height: 90%;
+        width: 45%;
+        word-break: keep-all;
+    }
+    
+    .div9 h4 {
+        color: rgb(115, 125, 134);
+    }
+    
+    .div10 {
+        margin-left: 18vh;
+        height: 90%;
+        width: 55%
+    }
+    
+    h4 {
+        color: rgb(207, 216, 218);
+        margin-left: 10vh;
+        margin-top: 5vh;
+    }
+    
+    #cnf {
+        margin-left: 20vh;
+        margin-top: 5vh;
+    }
+    
+    #in1 {
+        margin-top: 3vh;
+        margin-left: 6vh;
+        border: 1px solid white;
+        border-radius: 20px;
+        height: 3.5vh;
+        width: 15vw;
+    }
+    
+    #in1:hover {
+        border: 2px solid rgb(202, 168, 14);
+    }
+    
+    #in2 {
+        margin-top: 3vh;
+        margin-left: 5vh;
+        border: 1px solid white;
+        border-radius: 20px;
+        height: 3.5vh;
+        width: 15vw;
+    }
+    
+    #in2:hover {
+        border: 2px solid rgb(202, 168, 14);
+    }
+    
+    #in3 {
+        margin-top: 3vh;
+        margin-left: 2vh;
+        border: 1px solid white;
+        border-radius: 20px;
+        height: 3.5vh;
+        width: 15vw;
+    }
+    
+    #in3:hover {
+        border: 2px solid rgb(202, 168, 14);
+    }
+    
+    #btn {
+        margin-top: 3vh;
+        margin-left: 14vh;
+        border: 1px solid white;
+        border-radius: 20px;
+        height: 4vh;
+        width: 6vw;
+    }
+    
+    #btn:hover {
+        background-color: crimson;
+    }
+    
+    .div2 i:hover {
+        border: 2px solid rgb(220, 237, 238);
+        border-radius: 20%;
+        background-color: rgba(5, 8, 170, 0.863);
+    }
