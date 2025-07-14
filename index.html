@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+      <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7199/7199685.png" type="image/png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js" defer></script>
+<link rel="stylesheet" href="portfolio.css">
+     
+    
+   
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+</head>
+
+<body>
+    <!-- Scrolling Text -->
+    <!-- <div class="scrolling-text">
+        🚂 Welcome to my portfolio • HTML • CSS • JavaScript • MERN Stack • Let’s work together! 🚂 Welcome to my portfolio • HTML • CSS • JavaScript • MERN Stack • Let’s work together! 🚂
+     Welcome to my portfolio • HTML • CSS • JavaScript • MERN Stack • Let’s work together! 🚂</div>
+     -->
+    <div class="bubble-container"></div>
+    <nav>
+        <div class="navbar" id="navbar">
+            <div class="toggle" onclick="toggleNavbar()">☰</div>
+            <ul>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://drive.google.com/file/d/1TRlzx8jxuetTSjh6pgXfkk3XO50X411D/view?usp=drivesdk" download class="resume-btn">Download Resume<i class="fas fa-download"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <button class="toggle-mode" id="modeToggle">
+        <i class="fas fa-sun" id="modeIcon"></i>
+    </button>
+     
+    
+    <header id="hero" role="banner">
+         <img src="https://media.licdn.com/dms/image/v2/D4D03AQENBC-kmPu_4w/profile-displayphoto-shrink_800_800/B4DZczywpqHwAc-/0/1748920635443?e=1756944000&v=beta&t=hTolggGFc8PbAnzPWuScn3vWzaxCwoVvILK5oJ37CRo" alt="Pavan Kushwaha" /> 
+        <h1 id="typing-effect"></h1>
+         
+        <p>I'm a passionate Frontend Developer crafting modern web experiences.</p>
+
+        <div class="cta">
+            <div>
+                <a href="mailto:pavankushwaha23072004@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/pavan-kushwaha-1b2144334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/PavanKushwaha23"><i class="fa-brands fa-github"></i></a>
+                <a href="https://youtube.com/@aviation8455?si=6XMCUuGTNbOxEk_4"><i class="fa-brands fa-youtube"></i></a>
+
+            </div>
+
+            <a href="#contact" class="btn" role="button">Get In Touch</a>
+        </div>
+    </header>
+
+    <main class="container" role="main">
+        <section id="about" aria-label="About Me">
+            <h2>About Me</h2>
+            <p>
+                I am a dedicated web developer with a love for building beautiful websites using modern technologies and best practices. With experience in HTML, CSS, and JavaScript, I build interactive interfaces that users enjoy.
+            </p>
+        </section>
+
+         <section id="education" aria-label="Education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Bachelor of Technology in Computer Science</strong><br> - Adina Institute Of Science & Technology Sagar M.P. , 2022 - 2026
+                <p>Relevant coursework: Data Structures, Web Development, Database Management Systems</p>
+            </li>
+            <li>
+                <strong>12th</strong> - Govt. Higher School Rajoua Sagar, 2021 - 2022
+                <p>Studied core subjects including Mathematics, Physics, and Chemistry.</p>
+            </li>
+        </ul>
+    </section>
+
+
+        <section id="skills" aria-label="Skills">
+            <h2>Skills</h2>
+            <div class="skill-list">
+                <div class="skill" data-skill="html" data-level="90">
+                    <h3>HTML</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+
+
+                <div class="skill" data-skill="css" data-level="85">
+                    <h3>CSS</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+
+                <div class="skill" data-skill="js" data-level="75">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+
+                <div class="skill" data-skill="bootstrap" data-level="75">
+                    <h3>Bootstrap</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+
+                <div class="skill" data-skill="react" data-level="70">
+                    <h3>React</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+
+                <div class="skill" data-skill="Nodejs" data-level="80">
+                    <h3>Nodejs</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+
+                <div class="skill" data-skill="mysql" data-level="75">
+                    <h3>MYSQL</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+                
+                
+                <div class="skill" data-skill="DSA" data-level="70">
+                    <h3>DSA</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+                
+                <div class="skill" data-skill="Git & Github" data-level="90">
+                    <h3>Git & Github</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+
+                <div class="skill" data-skill="Python" data-level="80">
+                    <h3>Python</h3>
+                    <div class="skill-bar"><span></span></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" aria-label="Projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+
+                <article class="project-card" tabindex="0" aria-describedby="desc-proj1">
+                    <img src="https://www.shutterstock.com/image-photo/famous-indian-madhya-pradesh-tourist-600w-2473265029.jpg" alt="Project 1 screenshot" class="project-image" />
+                    <div class="project-content">
+                        <h3 class="project-title">Spiritual Photography Portfolio Website</h3>
+                        <p id="desc-proj1" class="project-description">Showcases images that explore themes of spirituality, inner peace, and connection with nature or the divine.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/PavanKushwaha23/Spiritual_photography.website-.git" target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <a href="https://rococo-naiad-e44513.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+
+    
+                <article class="project-card" tabindex="0" aria-describedby="desc-proj4">
+                    <img src="https://i.ytimg.com/vi/myoe54ZGIa4/maxresdefault.jpg" alt="Project 4 screenshot" class="project-image" />
+                    <div class="project-content">
+                        <h3 class="project-title">Cricket Score Predictor</h3>
+                        <p id="desc-proj3" class="project-description">Simple demonstration using a pre-trained linear regression model implemented in JavaScript.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/PavanKushwaha23/Cricket-Score-Prediction.git" target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <a href="https://pavankushwaha23.github.io/portfolio2/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article class="project-card" tabindex="0" aria-describedby="desc-proj8">
+                    <img src="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1007%2Fs10462-023-10534-z/MediaObjects/10462_2023_10534_Fig2_HTML.png" alt="Project 8 screenshot" class="project-image" />
+                    <div class="project-content">
+                        <h3 class="project-title">Animal Recognition System</h3>
+                        <p id="desc-proj3" class="project-description">Useful to Recognise different types of Animals .</p>
+                        <div class="project-links">
+                            <a href="https://github.com/PavanKushwaha23/Animal-Recognition-System-.git" target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <a href="https://boisterous-liger-56cbde.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="project-card" tabindex="0" aria-describedby="desc-proj19">
+                    <img src="https://t3.ftcdn.net/jpg/02/14/53/92/360_F_214539232_YnUrtuwUEt84gHuU0qG8l7OwZvH4rnPG.jpg" alt="Project 19 screenshot" class="project-image" />
+                    <div class="project-content">
+                        <h3 class="project-title">Responsive Landing Page For Startup</h3>
+                        <p id="desc-proj3" class="project-description">Landing page for startup with modern UI.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/PavanKushwaha23/Sartup-Landing.page.git" target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <a href="https://lovely-moonbeam-4270fc.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="project-card" tabindex="0" aria-describedby="desc-proj21">
+                    <img src="https://www.bytewebster.com/frontendprojects/uploads/images/responsive-e-commerce-website-template-bytewebster-1.jpg" alt="Project 21 screenshot" class="project-image" />
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Price Listing</h3>
+                        <p id="desc-proj3" class="project-description">Useful to filter product that customer really want.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/PavanKushwaha23/E-Commerce.site.git" target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <a href="https://prismatic-brioche-545d65.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card" tabindex="0" aria-describedby="desc-proj24">
+                    <img src="https://i.ytimg.com/vi/JtrFzoL1joI/maxresdefault.jpg" alt="Project 24 screenshot" class="project-image" />
+                    <div class="project-content">
+                        <h3 class="project-title">Music Player</h3>
+                        <p id="desc-proj3" class="project-description">Useful to listen music.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/PavanKushwaha23/Music-player23.git" target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <a href="https://lambent-muffin-f8f03a.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <!-- Button for visiting more projects -->
+    <div class="more-projects">
+        <a href="https://github.com/PavanKushwaha23" target="_blank" class="btn more-projects-btn" role="button">Visit More Projects</a>
+    </div>
+        </section>
+
+ <section id="experience" aria-label="Experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <strong>Frontend Developer Intern</strong> - Company Name, June 2023 - August 2023
+                <p>Worked on developing responsive web applications using HTML, CSS, and JavaScript. Collaborated with designers to implement user-friendly interfaces.</p>
+            </li>
+            <li>
+                <strong>Web Development Volunteer</strong> - Non-Profit Organization, January 2023 - May 2023
+                <p>Assisted in creating and maintaining the organization's website, improving user experience and accessibility.</p>
+            </li>
+        </ul>
+    </section>
+
+ 
+<section id="contact" aria-label="Contact Form">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mldlrpyp" method="POST" id="contact-form" novalidate>
+
+         <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required minlength="2" /> 
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message" required minlength="10"></textarea>
+
+        <button type="submit">Send Message</button>
+         <div class="form-message" aria-live="polite" role="alert"></div> 
+    </form>
+</section>
+
+
+    </main>
+
+    <footer>
+        <!-- <i class="fa-sharp fa-solid fa-location-dot" class="lp"></i> Sagar ,Madhya Pradesh ,India Pincode 470002<br><i class="fa-sharp fa-solid fa-phone"></i>+91 76939 28292
+        <hr> &copy; 2025 Pavan Kushwaha. All rights reserved. -->
+        <div class="footer-content">
+        <div class="footer-info">
+            <p><i class="fa-sharp fa-solid fa-location-dot"></i> Sagar, Madhya Pradesh, India Pincode 470001</p>
+               <a href="tel:+917693928292" id="mobile_no"><p style="color:white"><i class="fa-sharp fa-solid fa-phone"></i> +91 76939 28292</p></a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/pavan-kushwaha-1b2144334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/PavanKushwaha23" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+            <a href="https://youtube.com/@aviation8455" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+            <a href="mailto:pavankushwaha23072004@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+    <hr>
+    <p>&copy; 2025 Pavan Kushwaha. All rights reserved.</p>
+        <p>Designed & Developed ❤️ by Pavan Kushwaha</p>
+
+    </footer>
+
+<div id="loader" class="loader"></div>
+        
+<script src="portfolio.js"></script>
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+<div id="welcomeModal" class="modal">
+    <div class="modal-content">
+        <h2>Welcome to My Portfolio!</h2>
+        <p>🌟 Hello there! I'm thrilled to have you here. Explore my work and discover my passion for web development.</p>
+        <p>📩 Feel free to reach out if you have any questions or just want to connect!</p>
+        <p>🙏Thank you for taking the time to visit my portfolio. I hope you find it insightful and engaging.</p>
+        <div class="modal-buttons">
+            <button class="close-button" id="closeModal">Close</button>
+            <a href="#projects" class="view-portfolio-button">View Portfolio</a>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+
+
+        

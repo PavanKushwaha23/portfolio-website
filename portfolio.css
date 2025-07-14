@@ -1,0 +1,926 @@
+        /* Reset & Base */
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        i {
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+        }
+        
+        i {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        i:hover {
+            height: 1rem;
+            width: 1rem;
+            color: rgb(226, 212, 14);
+        }
+        
+        .lp {
+            text-align: left;
+            font-size: 12px;
+            margin-left: 1rem;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        a {
+            color: #64ffda;
+            text-decoration: none;
+        }
+        
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            margin-top: 0;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #64ffda;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #64ffda;
+            padding-bottom: 0.3em;
+            margin-bottom: 1em;
+        }
+        /* Container */
+        
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            flex-grow: 1;
+        }
+        /* Navigation */
+        
+        nav {
+            background: #1e1e1e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 0.7);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            font-weight: 600;
+            font-size: 1rem;
+            user-select: none;
+        }
+        
+        nav ul li a {
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #00f0ff;
+            border-bottom: 2px solid #00f0ff;
+            padding-bottom: 0.2em;
+        }
+ 
+        .toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #64ffda;
+        }
+         @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #1e1e1e;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 1rem 0;
+            }
+         
+            .navbar.active ul {
+                display: flex;
+                
+            }
+
+            nav ul li {
+            margin-left: 2rem;
+        }
+            .toggle {
+                display: block;
+                margin-left: 2rem;
+            }
+        }
+
+        /* Light mode styles */
+        body.light-mode {
+            background: #ffffff;
+            color: #000000;
+        }
+        body.light-mode nav {
+            background: #f0f0f0; /* Light mode nav background */
+        }
+
+
+        body.light-mode nav ul li a {
+            color: #007bff; /* Light mode link color */
+        }
+
+         body.light-mode #hero {
+            background: #ffffff; /* Light mode hero background */
+            color: #000000; /* Light mode hero text color */
+        }
+         body.light-mode #hero .btn {
+            background: #007bff; /* Light mode button background */
+            color: #ffffff; /* Light mode button text color */
+        }
+        body.light-mode.toggle {
+            
+            color: #007bff;
+        }
+
+         body.light-mode #hero h1 {
+            
+            color: #007bff; 
+        }
+        
+        
+        body.light-mode.toggle{color: #007bff;}
+
+
+        /* body.light-mode.toggle-mode:hover {
+            color: #040404;
+        }
+
+        body.light-mode .toggle-mode {
+    color: #007bff; 
+}
+
+body.light-mode .toggle-mode i {
+    color: #000000; 
+} */
+
+
+
+        body.light-mode section {
+            background: #f9f9f9; /* Light mode section background */
+            color: #000000; /* Light mode section text color */
+        }
+         body.light-mode #about {
+            background: #ffffff; /* Light mode background */
+            color: #000000; /* Light mode text color */
+            padding: 3rem 2rem; /* Increased padding */
+        }
+        body.light-mode .skill {
+            background: #ffffff; /* Light mode skill background */
+            color: #000000; /* Light mode skill text color */
+        }
+        body.light-mode .skill h3 {
+            color: #007bff; /* Light mode skill title color */
+        }
+        body.light-mode .project-card {
+            background: #ffffff; /* Light mode project card background */
+            color: #000000; /* Light mode project card text color */
+        }
+        body.light-mode .project-title {
+            color: #007bff; /* Light mode project title color */
+        }
+        body.light-mode #contact {
+            background: #f9f9f9; /* Light mode contact section background */
+        }
+
+         body.light-mode #contact input,
+        body.light-mode #contact textarea {
+            background: #ffffff; /* Light mode input background */
+            color: #000000; /* Light mode input text color */
+            border: 2px solid #007bff; /* Light mode input border color */
+        }
+
+
+        /* Toggle button styles */
+        .toggle-mode {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #64ffda;
+            z-index: 1000; 
+        }
+
+        .toggle-mode:hover {
+            color: #00f0ff;
+        }
+
+        /* Hero */
+        
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6rem 1rem 4rem;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #64ffda;
+        }
+         
+        #hero img {
+            width: 150px;
+            height: 150px; 
+            border-radius: 50%; /* Makes the image circular */
+            margin-bottom: 1rem; /* Space between image and text */
+        }
+        
+        #hero p {
+            font-size: 1.3rem;
+            max-width: 500px;
+            margin: 1rem 0 0;
+        }
+        
+        #hero .cta {
+            margin-top: 2rem;
+        }
+        
+        #hero .btn {
+            background: #64ffda;
+            color: #121212;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px #64ffdaa0;
+            transition: background-color 0.3s ease;
+        }
+        
+        #hero .btn:hover {
+            background-color: #00f0ff;
+            box-shadow: 0 6px 20px #00f0ffa0;
+        }
+        /* Sections */
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        /* About */
+        
+        #about {
+            background: #1e1e1e;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgb(100 255 218 / 0.3);
+            margin-top: 3rem;
+        }
+        
+        #about p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #a0a0a0;
+        }
+        /* Skills */
+        
+        #skills .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .skill {
+            background: #222;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            width: 200px;
+            box-shadow: 0 0 12px rgb(100 255 218 / 0.2);
+            user-select: none;
+        }
+        
+        .skill h3 {
+            margin-bottom: 0.7rem;
+            color: #00f0ff;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .skill-bar {
+            background: #555;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 12px;
+            position: relative;
+        }
+        
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: #64ffda;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #64ffda;
+        }
+        /* Projects */
+        
+        #projects .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            /* Start hidden for animation */
+            transform: translateY(20px);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 255, 255, 0.6);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background: #333;
+        }
+        
+        .project-content {
+            padding: 1rem 1rem 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .project-title {
+            font-size: 1.2rem;
+            color: #00f0ff;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .project-description {
+            color: #a0a0a0;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+        
+        .project-links a {
+            background: #64ffda;
+            color: #121212;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px #64ffdaa0;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+        
+        .project-links a:hover {
+            background: #00f0ff;
+            box-shadow: 0 5px 20px #00f0ffa0;
+        }
+        /* Contact */
+        
+        #contact {
+            background: #1e1e1e;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgb(100 255 218 / 0.3);
+            max-width: 600px;
+            margin: 0 auto 5rem;
+        }
+        
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        #contact label {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        #contact input,
+        #contact textarea {
+            padding: 0.7rem 1rem;
+            background: #121212;
+            border: 2px solid #444;
+            border-radius: 7px;
+            font-size: 1rem;
+            color: #e0e0e0;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+        
+        #contact input:focus,
+        #contact textarea:focus {
+            outline: none;
+            border-color: #64ffda;
+            box-shadow: 0 0 8px #64ffda;
+        }
+        
+        #contact button {
+            background: #64ffda;
+            color: #121212;
+            font-weight: 700;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px #64ffdaa0;
+            transition: background-color 0.3s ease;
+        }
+        
+        #contact button:hover {
+            background-color: #00f0ff;
+            box-shadow: 0 6px 20px #00f0ffa0;
+        }
+        
+        #contact .form-message {
+            margin-top: 0.7rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            height: 1.4rem;
+            color: #64ffda;
+        }
+
+        /* Footer */
+        
+        /* footer {
+            background: #121212;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #222;
+            user-select: none;
+        } */
+
+        footer
+         {
+    background: #1e1e1e; /* Dark background for the footer */
+    color: #e0e0e0; /* Light text color */
+    text-align: center;
+    padding: 2rem 0; /* Increased padding for better spacing */
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+    user-select: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode footer {
+    background: #f0f0f0; /* Light mode footer background */
+    color: #333; /* Dark text color for light mode */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-info {
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between social icons */
+}
+
+.footer-social a {
+    color: #64ffda; /* Icon color */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #00f0ff; /* Change color on hover */
+}
+
+       
+          /* Responsive Adjustments */
+        
+        @media (max-width: 600px) {
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+            #hero p {
+                font-size: 1.1rem;
+            }
+        }
+
+        .bubble-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* Prevent interaction with bubbles */
+    z-index: -1; /* Place behind other content */
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px; /* Start below the viewport */
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: rise 10s infinite; /* Animation for rising effect */
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh); /* Move to the top of the viewport */
+        opacity: 0; /* Fade out */
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: #64ffda; /* Button color */
+    color: #121212; /* Text color */
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* Button size */
+    height: 50px; /* Button size */
+    font-size: 24px; /* Font size */
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.scroll-to-top:hover {
+    background-color: #00f0ff; /* Change color on hover */
+}
+
+
+
+/* Light mode styles */
+body.light-mode {
+    background: #f9f9f9; /* Light mode background */
+    color: #333; /* Dark text color for better readability */
+}
+
+body.light-mode nav {
+    background: #ffffff; /* Light mode nav background */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+body.light-mode nav ul li a {
+    color: #007bff; /* Light mode link color */
+}
+
+body.light-mode #hero {
+    background: #ffffff; /* Light mode hero background */
+    color: #000000; /* Light mode hero text color */
+}
+
+body.light-mode #hero .btn {
+    background: #007bff; /* Light mode button background */
+    color: #ffffff; /* Light mode button text color */
+    border: none; /* Remove border */
+    padding: 0.8rem 2rem; /* Add padding */
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+body.light-mode #hero .btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+body.light-mode section {
+    background: #ffffff; /* Light mode section background */
+    color: #000000; /* Light mode section text color */
+    padding: 3rem 2rem; /* Increased padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+body.light-mode .skill {
+    background: #ffffff; /* Light mode skill background */
+    color: #000000; /* Light mode skill text color */
+    border: 1px solid #ddd; /* Light border */
+}
+
+body.light-mode .skill h3 {
+    color: #007bff; /* Light mode skill title color */
+}
+
+body.light-mode .project-card {
+    background: #ffffff; /* Light mode project card background */
+    color: #000000; /* Light mode project card text color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+body.light-mode .project-title {
+    color: #007bff; /* Light mode project title color */
+}
+
+body.light-mode #contact {
+    background: #ffffff; /* Light mode contact section background */
+}
+
+body.light-mode #contact input,
+body.light-mode #contact textarea {
+    background: #ffffff; /* Light mode input background */
+    color: #000000; /* Light mode input text color */
+    border: 2px solid #007bff; /* Light mode input border color */
+}
+
+body.light-mode footer {
+    background: #f0f0f0; /* Light mode footer background */
+    color: #333; /* Dark text color for light mode */
+    padding: 2rem 0; /* Increased padding for better spacing */
+}
+
+.footer-social a {
+    color: #007bff; /* Icon color */
+}
+
+.footer-social a:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.9); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it is above all other content */
+}
+
+.loader::after {
+    content: '';
+    border: 8px solid #64ffda; /* Spinner color */
+    border-top: 8px solid transparent; /* Transparent top */
+    border-radius: 50%;
+    width: 50px; /* Spinner size */
+    height: 50px; /* Spinner size */
+    animation: spin 1s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #1e1e1e; /* Dark background for dark mode */
+    color: #e0e0e0; /* Light text color for dark mode */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-button {
+    background-color: #64ffda; /* Button color */
+    color: #121212; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.close-button:hover {
+    background-color: #00f0ff; /* Change color on hover */
+}
+
+.modal-buttons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+.view-portfolio-button {
+    background-color: #64ffda; /* Button color */
+    color: #121212; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-top: 20px; 
+}
+.view-portfolio-button:hover {
+    background-color: #00f0ff; /* Change color on hover */
+}
+
+/* Light mode styles for the modal */
+body.light-mode .modal-content {
+    background-color: #ffffff; /* Light background for light mode */
+    color: #000000; /* Dark text color for light mode */
+}
+
+body.light-mode .close-button {
+    background-color: #007bff; /* Light mode button color */
+    color: #ffffff; /* Light mode button text color */
+}
+
+ .scrolling-text {
+    position: fixed;
+    top: 0px;
+    left: 100%;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+    font-size: 20px;
+    color: #64ffda;
+    z-index: 1000;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .scrolling-text {
+        top: 0px; /* Adjust for smaller screens */
+    }
+}
+
+#mobile_no {
+    color: #64ffda; /* Mobile number color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Education Section */
+#education {
+    background: rgba(30, 30, 30, 0.9); /* Less transparent */
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(100 255 218 / 0.3);
+}
+
+/* Experience Section */
+#experience {
+    background: rgba(30, 30, 30, 0.9); /* Less transparent */
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(100 255 218 / 0.3);
+}
+
+    /* Light mode styles for Education Section */
+body.light-mode #education {
+    background: #ffffff; /* Light background for light mode */
+    color: #000000; /* Dark text color for better readability */
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Light mode styles for Experience Section */
+body.light-mode #experience {
+    background: #ffffff; /* Light background for light mode */
+    color: #000000; /* Dark text color for better readability */
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+        /* Custom selection color */
+::selection {
+    background-color: rgba(100, 255, 218, 0.5); /* Light teal background */
+    color: #121212; /* Dark text color for contrast */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-moz-selection {
+    background-color: rgba(100, 255, 218, 0.5); /* Light teal background */
+    color: #121212; /* Dark text color for contrast */
+}
+
+/* Image hover effect */
+.project-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+.project-image:hover {
+    transform: scale(1.05); /* Scale the image slightly */
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5); /* Add a glowing shadow effect */
+}
+#hero img:hover {
+    transform: scale(1.1); /* Scale the image slightly */
+    box-shadow: 0 8px 20px rgba(100, 255, 218, 0.5); /* Add a glowing shadow effect */
+}
+.more-projects {
+    text-align: center; /* Center the button */
+    margin-top: 2rem; /* Space above the button */
+}
+
+.more-projects-btn {
+    background: #64ffda; /* Button background color */
+    color: #121212; /* Button text color */
+    padding: 0.8rem 2rem; /* Button padding */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    font-weight: 700; /* Bold text */
+    font-size: 1.1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 5px 15px #64ffdaa0; /* Shadow effect */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    display: inline-block; /* Make it inline-block for better alignment */
+}
+
+.more-projects-btn:hover {
+    background-color: #00f0ff; /* Change color on hover */
+    box-shadow: 0 6px 20px #00f0ffa0; /* Shadow effect on hover */
+}
